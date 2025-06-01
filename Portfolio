@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michelle Lindsay – Creative Communications</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header, section, footer {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+    }
+    .project {
+      margin-bottom: 2rem;
+    }
+    .project h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .filter-buttons {
+      margin-bottom: 2rem;
+    }
+    .filter-buttons button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background: #222;
+      color: #fff;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+    }
+    a {
+      color: #1da1f2;
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Michelle Lindsay</h1>
+    <p>Creative Communications</p>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">About</h2>
+    <p>Michelle Lindsay is a creative professional with a focus on pop-up experiences, brand collaborations, production, and sustainable innovation. Based in Paris, she has led and contributed to multidisciplinary projects across Europe and North America — merging storytelling, design, and strategic outreach to elevate brand experiences.</p>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="filter-buttons">
+      <button onclick="filterProjects('all')">All</button>
+      <button onclick="filterProjects('event')">Events</button>
+      <button onclick="filterProjects('collaboration')">Collaborations</button>
+      <button onclick="filterProjects('production')">Production</button>
+      <button onclick="filterProjects('press')">Press</button>
+      <button onclick="filterProjects('styling')">Styling</button>
+    </div>
+    <div class="project event">
+      <h3>Pop Ups and Event Production – Paris (Oct 2022)</h3>
+      <p>Scouted location, curated guest list, created marketing materials, and supported scenography design.</p>
+    </div>
+    <div class="project event">
+      <h3>Pop Ups and Event Production – Paris (Nov 2023)</h3>
+      <p>Full project management, logistics, DJ and guest list curation, collaborated with Le Philtre Vodka.</p>
+    </div>
+    <div class="project collaboration">
+      <h3>Collaborations and Pop Up – Amsterdam (Jul 2023)</h3>
+      <p>Production assistance, guest curation, invitation/graphics design.</p>
+    </div>
+    <div class="project collaboration">
+      <h3>H Project Anniversary – Toronto</h3>
+      <p>Represented Argot Studio with a live 3D printing installation at H Project's 10-year anniversary hosted by Holt Renfrew.</p>
+    </div>
+    <div class="project production">
+      <h3>Amomento x Argot Studio</h3>
+      <p>Produced branded objects for S/S23; managed production and logistics.</p>
+    </div>
+    <div class="project collaboration">
+      <h3>Les Précieuses Lamps</h3>
+      <p>Collaborative project blending hand-blown glass with 3D printing; branding and shoot support.</p>
+    </div>
+    <div class="project production">
+      <h3>Hublot x Superbien – Dubai Watch Week</h3>
+      <p>Led business development for a digital experience installation featuring 3D printed material showcases.</p>
+    </div>
+    <div class="project styling">
+      <h3>Celebrity Styling – Paris Fashion Week (Mar 2025)</h3>
+      <p>Assisted Georgina Downe with eventwear and streetstyle looks for a high-profile client.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: <a href="mailto:michellefranceslindsay@gmail.com">michellefranceslindsay@gmail.com</a></p>
+    <p>Phone: +33 7 68 33 21 05</p>
+    <p>Instagram: <a href="https://www.instagram.com/georginadowne" target="_blank">@georginadowne</a></p>
+    <p>Portfolio Drive: <a href="https://drive.google.com/drive/folders/12PpVg1vbL1BDzyXi-qg7PdJc1p1kBkcg" target="_blank">Google Drive Folder</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Michelle Lindsay. Built for GitHub Pages.</p>
+  </footer>
+
+  <script>
+    function filterProjects(category) {
+      const projects = document.querySelectorAll('.project');
+      projects.forEach(p => {
+        if (category === 'all') {
+          p.style.display = 'block';
+        } else {
+          p.style.display = p.classList.contains(category) ? 'block' : 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
